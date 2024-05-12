@@ -70,7 +70,7 @@ If you do not want to build the aya-node from source (as described in 3.2), you 
 Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so make sure you adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`.
 
 ```bash
-cd /home/"${USER}"
+cd /home/${USER}
 mkdir -p aya-node/target/release
 cd aya-node
 wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
@@ -127,12 +127,12 @@ Make sure the path to the aya-node binary is correct in the command below. It is
 Set AyA Home Path to the folder were your aya-node binary is located: 
 
 ```bash
-export AYA_HOME=/home/"${USER}"/aya-node
+export AYA_HOME=/home/${USER}/aya-node
 ```
 
 Set `AYA_HOME` on server start: 
 ```bash
-sudo bash -c "echo 'export AYA_HOME=/home/"${USER}"/aya-node' >> /etc/bash.bashrc"
+sudo bash -c "echo 'export AYA_HOME=/home/${USER}/aya-node' >> /etc/bash.bashrc"
 ```
 
 Create Startup Script: 
