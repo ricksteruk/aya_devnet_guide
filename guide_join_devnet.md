@@ -283,10 +283,14 @@ Inspect key:
 
 To setup the validator we need to add the secret keys to the keyring on the validator machine. On the machine running the validator, navigate to the `aya-node` folder.
 
+```bash
+cd /home/${USER}/aya-node
+```
+
 We need to add three keys: the AURA_KEY, GRANDPA_KEY and IM_ONLINE_KEY. In this example the secret seeds are the same because we did not derived a key.  In a more complicated swrt up where you may use key derivation, the secret seeds of the ed25519 and sr25519 scheme might differ! The AURA_KEY and IM_ONLINE_KEY is the same sr25519 secret seed, the GRANDPA_KEY is the ed25519 secret seed.  
 You also need to set the base path of the node, the path were all data for the node is stored. We use `data/validator`, make sure the path is accessible. 
 
-Enter your Secret Seed keys from above as an environment variable;  ( REPLACE THIS EXAMPLE SEED WITH YOUR OWN!! )
+Enter your Secret Seed keys from Step 5 above:  ( REPLACE THIS EXAMPLE SEED WITH YOUR OWN!! )
 ```bash
 export SECRET_SEED=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
 ```
