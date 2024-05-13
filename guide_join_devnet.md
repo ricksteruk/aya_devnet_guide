@@ -359,7 +359,7 @@ The output contains the AURA, GRANDPA and IMONLINE public keys in one large stri
 
 Tip: Just use the script `utils/session_key_tools/split_session_key.sh` 
 
-Copy the result the from the CURL above and paste it in after typing: `./utils/session_key_tools/split_session_key.sh `
+Copy the result the from the CURL above and paste it in after typing: ```./utils/session_key_tools/split_session_key.sh ```
  
 Example: 
 ```
