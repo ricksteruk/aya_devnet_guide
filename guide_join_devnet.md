@@ -62,47 +62,15 @@ cd /home/${USER}
 mkdir -p aya-node/target/release
 cd aya-node
 wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
-cd target/release
-wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
-chmod +x aya-node
-cd ../..
+wget target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
+chmod +x target/release/aya-node
 ```
 
-We now need to create a simple script that we will use later to split our rotated session keys.   First we'll create the folder for the tool with the same location as it would be in the self-complied node.  Then we use the nano command to create the script.
+We also need to download the script that we will use later to split our rotated session keys.
 
 ```bash
 mkdir -p utils/session_key_tools
-nano utils/session_key_tools/split_session_key.sh
-```
-
-Paste the following text and then CTRL-X to save the file
-
-```bash
-#!/usr/bin/env bash
-set -e
-
-if [[ $# -ne 1 ]]; then
-    echo "Please provide a session key as parameter to the script!"
-    exit 1
-else
-    SESSION_KEY=$1
-    if [[ ! ${#SESSION_KEY} -eq 194 ]]; then
-        echo "Please provide a valid session key!"
-        exit 1
-    fi
-fi
-
-echo "------------------------------------"
-echo "Your session keys:"
-echo AURA_SESSION_KEY=${SESSION_KEY:0:66}
-echo GRANDPA_SESSION_KEY=0x${SESSION_KEY:66:64}
-echo IM_ONLINE_SESSION_KEY=0x${SESSION_KEY:130:64}
-echo "------------------------------------"
-```
-
-Now we need to make the file executable
-
-```bash
+wget -P utils/session_key_tools https://github.com/worldmobilegroup/aya-node/blob/main/utils/session_key_tools/split_session_key.sh
 chmod +x utils/session_key_tools/split_session_key.sh
 ```
 
