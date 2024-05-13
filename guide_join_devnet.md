@@ -497,5 +497,5 @@ sudo ufw deny 9944
 
 Enable the firewall:
 ```bash
-sufo ufw enable
+sudo ufw enable
 ```
