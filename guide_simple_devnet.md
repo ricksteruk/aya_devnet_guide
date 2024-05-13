@@ -22,41 +22,7 @@ Install dependencies:
 sudo apt upgrade && sudo apt update
 sudo apt install -y git clang curl libssl-dev llvm libudev-dev make protobuf-compiler pkg-config build-essential
 ```
-## 3. Set up Build Environment
-
-Install Rust: 
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-Proceed with option 1 "Standard Installation" in the prompt, just hit enter. 
-
-Get Rust enviornment into terminal session:
-```bash
-source $HOME/.cargo/env
-```
-
-Check Rust is installed correctly
-```bash
-rustc --version
-```
-
-Configure Rust toolchain: 
-```bash
-rustup default stable
-rustup component add rust-src --toolchain stable-x86_64-unknown-linux-gnu
-rustup target add wasm32-unknown-unknown
-rustup update
-```
-
-Check Rust Installation:
-```bash
-rustup show
-```
-
-### 3.1 Install AyA-Node from Precompiled Binaries
-
-You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
+## 3. Install Aya-Node
 
 [Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
 
@@ -78,45 +44,6 @@ mkdir -p utils/session_key_tools
 wget -P utils/session_key_tools https://github.com/worldmobilegroup/aya-node/blob/main/utils/session_key_tools/split_session_key.sh
 chmod +x utils/session_key_tools/split_session_key.sh
 ```
-
-( now move on to Step 4 )
-
-### 3.2 Build AyA-Node from Source Code
-
-We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
-
-Clone the AyA-Node Repository:
-```bash
-git clone https://github.com/worldmobilegroup/aya-node.git
-cd aya-node
-```
-
-For DevNet we checkout the devnet version of the aya-node and create a new local branch: 
-```bash
-git checkout tags/devnet-v.0.2.0 -b my-devnet-branch
-```
-
-Compile the AyA-Node:
-```bash
-cargo build --release
-```
-
-***Additional Information***
-
-If you want to update your local github repository and work with another branch you can do that for example:
-
-```bash
-git checkout main
-git pull origin main
-```
-
-If you want to merge the changes of another branch into your local branch, for example `main` into your `my-devnet-branch`, you can do that with: 
-```bash
-git checkout my-devnet-branch
-git merge main
-```
-For more information on git see: [A beginner's guide to Git version control](https://developers.redhat.com/articles/2023/08/02/beginners-guide-git-version-control#)
-
 
 ## 4. Setting Up systemd
 We want our validator to start automatically with the server and be restarted automatically. For that purpose we create a systemd service (Ubuntu 22.04).
