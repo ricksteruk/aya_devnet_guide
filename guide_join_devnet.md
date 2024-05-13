@@ -407,7 +407,7 @@ It is possible to connect via REST API `https://devnet-rpc.worldmobilelabs.com` 
 In Talisman go to `Settings -> Networks & Tokens -> Manage Networks`
 ![Talisman Settings](assets/talisman_settings.png)
 
-Make sure you check "Allow Testnets"
+Make sure you check `Enable testnets`
 
 You can find two buttons to select the different network types `Ethereum` and `Polkadot`:
 ![Talisman Network Types](assets/talisman_network_types.png)
