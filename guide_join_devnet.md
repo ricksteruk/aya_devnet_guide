@@ -55,7 +55,7 @@ You can either use precomplied binaries to install aya-node or build the aya-nod
 
 [Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
 
-Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`.
+Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
 
 ```bash
 cd /home/${USER}
@@ -108,7 +108,7 @@ For more information on git see: [A beginner's guide to Git version control](htt
 
 
 ## 4. Setting Up systemd
-We want that our validator starts automatically with the server and is restarted automatically. For that purpose we create a systemd service (Ubuntu 22.04).
+We want our validator to start automatically with the server and be restarted automatically. For that purpose we create a systemd service (Ubuntu 22.04).
 
 First we create a startup script for the AyA-Node.
 
