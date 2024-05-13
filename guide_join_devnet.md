@@ -110,7 +110,7 @@ move on to Step 4.
 
 ### 3.2 Build AyA-Node from Source Code
 
-We recommend to compile the aya-node not on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
+We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
 
 Clone the AyA-Node Repository:
 ```bash
