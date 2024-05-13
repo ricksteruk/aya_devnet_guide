@@ -308,7 +308,7 @@ export SECRET_SEED=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb779
     --chain wm-devnet-chainspec.json \
     --key-type gran \
     --scheme ed25519 \
-    --suri "${SECRET_SEED";
+    --suri "${SECRET_SEED}";
     
 ./target/release/aya-node key insert \
     --base-path data/validator \
