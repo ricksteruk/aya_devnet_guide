@@ -359,10 +359,10 @@ The output contains the AURA, GRANDPA and IMONLINE public keys in one large stri
 
 Tip: Just use the script `utils/session_key_tools/split_session_key.sh` 
 
-Just copy the result the from above and paste it in after typing: `./utils/session_key_tools/split_session_key.sh `
+Copy the result the from the CURL above and paste it in after typing: `./utils/session_key_tools/split_session_key.sh `
  
 Example: 
-``
+```
 ./utils/session_key_tools/split_session_key.sh 0x42ad00eae2336671febcce956db3e5716b4ad7fb3cc8bb576463882f3b3eab256091e0b8a8e08eef8b13153a05800712a4b661a3470f817dc002fd3c63649f26305a8ce33139a89753136bb5c77ebcc38ace19ebb27d96ad7a52c0ee5ebebc77
 ------------------------------------
 Your session keys:
@@ -370,7 +370,7 @@ AURA_SESSION_KEY=0x42ad00eae2336671febcce956db3e5716b4ad7fb3cc8bb576463882f3b3ea
 GRANDPA_SESSION_KEY=0x6091e0b8a8e08eef8b13153a05800712a4b661a3470f817dc002fd3c63649f26
 IM_ONLINE_SESSION_KEY=0x305a8ce33139a89753136bb5c77ebcc38ace19ebb27d96ad7a52c0ee5ebebc77
 ------------------------------------
-``
+```
 
 Put the keys aside, you will need them in the next step. 
 
@@ -395,9 +395,9 @@ bottom drive obey lake curtain smoke basket hold race lonely fit walk
 
 Go to the [Talisman Website](https://www.talisman.xyz/) and follow the instructions to install the talisman wallet extension.
 
-#### Restore or Generate a EVM Wallet
+#### Restore or Generate a Ethereum Wallet
 
-Use your mnemonic to restore the wallet in Talisman or create a new account. 
+Use your mnemonic to restore the wallet in Talisman or create a new Ethereum account. 
 
 #### Add AyA DevNet to Talisman
 
