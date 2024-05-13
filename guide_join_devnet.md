@@ -49,6 +49,12 @@ rustup target add wasm32-unknown-unknown
 rustup update
 ```
 
+Check Rust Installation:
+```bash
+rustup show
+rustup +nightly show
+```
+
 ### 3.1 Install AyA-Node from Precompiled Binaries
 
 You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
