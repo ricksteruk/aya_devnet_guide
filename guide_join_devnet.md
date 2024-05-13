@@ -52,7 +52,6 @@ rustup update
 Check Rust Installation:
 ```bash
 rustup show
-rustup +nightly show
 ```
 
 ### 3.1 Install AyA-Node from Precompiled Binaries
