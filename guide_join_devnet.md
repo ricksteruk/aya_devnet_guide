@@ -146,6 +146,8 @@ echo "${AYA_HOME}/target/release/aya-node \
 sudo chmod +x ./start_aya_validator.sh
 ```
 
+`NOTE: If you want to set up a second Aya DevNet Node at the same external address use a different port eg: 30334`
+
 Let us test that the validator starts by executing the script we just created
 ```bash
 ./start_aya_validator.sh
