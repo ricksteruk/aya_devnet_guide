@@ -76,6 +76,8 @@ cd aya-node
 wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
 cd target/release
 wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
+chmod +x aya-node
+cd ../..
 ```
 
 move on to Step 4.
