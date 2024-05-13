@@ -49,21 +49,9 @@ rustup target add wasm32-unknown-unknown
 rustup update
 ```
 
-Configure Rust Nighly (Nighly is needed to build subkey, it can be skipped if you don't want to compile subkey but subkey is expected if you want to use the scripts in the utils folder of the aya-node repository.)
-```bash
-rustup update nightly
-rustup target add wasm32-unknown-unknown --toolchain nightly
-```
-
-Check Rust Installation:
-```bash
-rustup show
-rustup +nightly show
-```
-
 ### 3.1 Install AyA-Node from Precompiled Binaries
 
-If you do not want to build the aya-node from source (as described in 3.2), you can use the precompiled binaries: 
+You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
 
 [Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
 
