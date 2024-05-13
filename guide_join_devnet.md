@@ -22,45 +22,33 @@ Install dependencies:
 sudo apt upgrade && sudo apt update
 sudo apt install -y git clang curl libssl-dev llvm libudev-dev make protobuf-compiler pkg-config build-essential
 ```
-## 3. Set up Build Environment
 
-Install Rust: 
+### Firewall
+The p2p port `30333` needs to be open so your Validator can communicate, either with only your full node or the entire network.  
+Make sure the port is open in your cloud / network configuration.
 
+### Set Up UFW Firewall
+To allow port `30333` and ssh access in ufw on your Validator do:
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-Proceed with option 1 "Standard Installation" in the prompt, just hit enter. 
-
-Get Rust enviornment into terminal session:
-```bash
-source $HOME/.cargo/env
+sudo ufw allow 30333
+sudo ufw allow ssh
 ```
 
-Check Rust is installed correctly
+The RPC port on your Validator should be blocked from the outside:
 ```bash
-rustc --version
+sudo ufw deny 9944
 ```
 
-Configure Rust toolchain: 
+Enable the firewall:
 ```bash
-rustup default stable
-rustup component add rust-src --toolchain stable-x86_64-unknown-linux-gnu
-rustup target add wasm32-unknown-unknown
-rustup update
+sudo ufw enable
 ```
 
-Check Rust Installation:
-```bash
-rustup show
-```
-
-### 3.1 Install AyA-Node from Precompiled Binaries
-
-You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
+## 3. Install Aya-Node
 
 [Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
 
-Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
+Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide aims to be compatible with building from source code so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
 
 ```bash
 cd /home/${USER}
@@ -107,43 +95,6 @@ Now make the file executable
 chmod +x utils/session_key_tools/split_session_key.sh
 ```
 
-( now move on to Step 4 )
-
-### 3.2 Build AyA-Node from Source Code
-
-We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
-
-Clone the AyA-Node Repository:
-```bash
-git clone https://github.com/worldmobilegroup/aya-node.git
-cd aya-node
-```
-
-For DevNet we checkout the devnet version of the aya-node and create a new local branch: 
-```bash
-git checkout tags/devnet-v.0.2.0 -b my-devnet-branch
-```
-
-Compile the AyA-Node:
-```bash
-cargo build --release
-```
-
-***Additional Information***
-
-If you want to update your local github repository and work with another branch you can do that for example:
-
-```bash
-git checkout main
-git pull origin main
-```
-
-If you want to merge the changes of another branch into your local branch, for example `main` into your `my-devnet-branch`, you can do that with: 
-```bash
-git checkout my-devnet-branch
-git merge main
-```
-For more information on git see: [A beginner's guide to Git version control](https://developers.redhat.com/articles/2023/08/02/beginners-guide-git-version-control#)
 
 
 ## 4. Setting Up systemd
@@ -511,24 +462,3 @@ We have setup a plain validator in this guide and connected it directly to the n
 validator behind a full node which is exposed to the public. The validator only connects to that full node in this case and not allow connections from the outside.
 
 Setup a full node which connects to the network in the way described in this guide. All the key related steps can be ignored for a full node. When you setup your validator you do not give the public bootnode in the `--bootnodes` parameter, but your own full node. With additonal measuremeants (e.g. cloud firewall or ufw) you can limit the connections to your validator. Only the p2p port (default 30333) needs to be open if you want to connect to the validator with another node. For example we could open the port 30333 only for the internal network IP address of our full node.
-
-## Firewall
-The p2p port `30333` needs to be open so your Validator can communicate, either with only your full node or the entire network.  
-Make sure the port is open in your cloud / network configuration.
-
-### Set Up UFW Firewall
-To allow port `30333` and ssh access in ufw on your Validator do:
-```bash
-sudo ufw allow 30333
-sudo ufw allow ssh
-```
-
-The RPC port on your Validator should be blocked from the outside:
-```bash
-sudo ufw deny 9944
-```
-
-Enable the firewall:
-```bash
-sudo ufw enable
-```
