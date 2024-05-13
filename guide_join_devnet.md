@@ -68,6 +68,40 @@ chmod +x aya-node
 cd ../..
 ```
 
+We now need to create a simple script that we will use later to split our rotated session keys.   First we'll create the folder for the tool with the same location as it would be in the self-complied node.  Then we use the nano command to create the script.
+
+```bash
+mkdir -p utils/session_key_tools
+nano utils/session_key_tools/split_session_key.sh
+```
+
+Paste the following text and then CTRL-X to save the file
+
+```bash
+#!/usr/bin/env bash
+set -e
+
+if [[ $# -ne 1 ]]; then
+    echo "Please provide a session key as parameter to the script!"
+    exit 1
+else
+    SESSION_KEY=$1
+    if [[ ! ${#SESSION_KEY} -eq 194 ]]; then
+        echo "Please provide a valid session key!"
+        exit 1
+    fi
+fi
+
+echo "------------------------------------"
+echo "Your session keys:"
+echo AURA_SESSION_KEY=${SESSION_KEY:0:66}
+echo GRANDPA_SESSION_KEY=0x${SESSION_KEY:66:64}
+echo IM_ONLINE_SESSION_KEY=0x${SESSION_KEY:130:64}
+echo "------------------------------------"
+```
+
+Now we need to make the file executable
+
 move on to Step 4.
 
 ### 3.2 Build AyA-Node from Source Code
@@ -238,35 +272,6 @@ Inspect key:
 ```bash
 ./target/release/aya-node key inspect "bottom drive obey lake curtain smoke basket hold race lonely fit walk"
 ```
-
-## 5.1 Get EVM Account and Derived Keys
-
-**If you use the mnemonic without derivation throughout this guide, there is no need to execute this part 5.1 as you will restore the mnemonic in a wallet and have your address there. Anyway this part has useful information for key handling**
-
-Subkey / Aya-Node unfortunately do not give us all information as they cannot derive the EVM account. To calculate the EVM account from the mnemonic you can use the `validator_keys.sh` script in the `utils/account_derivation_tools/scripts` folder of the aya-node repository. Be aware that the scripts expect `subkey` to be installed in `/usr/bin`. The script will create the EVM account with the address_index 0 only. See also the Readme in `utils/account_derivation_tools`.
-
-You need to have npm and node js installed: 
-```bash
-sudo apt update
-sudo apt install nodejs
-sudo apt install npm
-```
-
-Next, install the dependencies (we assume you are on the projects root directory):
-
-```bash
-cd utils/account_derivation_tools/tools/keys
-npm i
-cd ../..
-```
-
-Execute the script using your generated mnemonic as input parameter.
-
-
-
-You can also get the comprressed EVM key by restoring the mnemonic in a ethereum wallet e.g. MetaMask or Talisman. You can choose in the wallet what address_indexes you want to add.
-
-
 
 ## 6. Set Validator Private Keys
 
