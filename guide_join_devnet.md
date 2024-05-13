@@ -283,14 +283,12 @@ Inspect key:
 
 To setup the validator we need to add the secret keys to the keyring on the validator machine. On the machine running the validator, navigate to the `aya-node` folder.
 
-We need to add three keys: the AURA_KEY, GRANDPA_KEY and IM_ONLINE_KEY. Depending on the key derivation, the secret seeds of the ed25519 and sr25519 scheme might differ! The AURA_KEY and IM_ONLINE_KEY is the same sr25519 secret seed, the GRANDPA_KEY is the ed25519 secret seed. In this example the secret seeds are the same because we did not derived a key. 
+We need to add three keys: the AURA_KEY, GRANDPA_KEY and IM_ONLINE_KEY. In this example the secret seeds are the same because we did not derived a key.  In a more complicated swrt up where you may use key derivation, the secret seeds of the ed25519 and sr25519 scheme might differ! The AURA_KEY and IM_ONLINE_KEY is the same sr25519 secret seed, the GRANDPA_KEY is the ed25519 secret seed.  
 You also need to set the base path of the node, the path were all data for the node is stored. We use `data/validator`, make sure the path is accessible. 
 
-Set keys to environment variables or enter directly at the `--suri` parameter:
+Enter your Secret Seed keys from above as an environment variable;  ( REPLACE THIS EXAMPLE SEED WITH YOUR OWN!! )
 ```bash
-export AURA_KEY=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
-export GRANDPA_KEY=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
-export IM_ONLINE_KEY=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
+export SECRET_SEED=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
 ```
 
 ```bash
@@ -299,21 +297,21 @@ export IM_ONLINE_KEY=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7
     --chain wm-devnet-chainspec.json \
     --key-type aura \
     --scheme sr25519 \
-    --suri "${AURA_KEY}";
+    --suri "${SECRET_SEED}";
 
 ./target/release/aya-node key insert \
     --base-path data/validator \
     --chain wm-devnet-chainspec.json \
     --key-type gran \
     --scheme ed25519 \
-    --suri "${GRANDPA_KEY}";
+    --suri "${SECRET_SEED";
     
 ./target/release/aya-node key insert \
     --base-path data/validator \
     --chain wm-devnet-chainspec.json \
     --key-type imon \
     --scheme sr25519 \
-    --suri "${IM_ONLINE_KEY}";
+    --suri "${SECRET_SEED}";
 ```
 
 Check if keys were added:
