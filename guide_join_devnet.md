@@ -102,6 +102,10 @@ echo "------------------------------------"
 
 Now we need to make the file executable
 
+```bash
+chmod +x utils/session_key_tools/split_session_key.sh
+```
+
 move on to Step 4.
 
 ### 3.2 Build AyA-Node from Source Code
