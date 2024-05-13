@@ -49,6 +49,8 @@ rustup target add wasm32-unknown-unknown
 rustup update
 ```
 
+`You can now choose to Install Aya-Node by downloading the Binaries (3.1) or by compiling from the Souece Code (3.2)`
+
 ### 3.1 Install AyA-Node from Precompiled Binaries
 
 You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
@@ -74,7 +76,7 @@ wget -P utils/session_key_tools https://github.com/worldmobilegroup/aya-node/blo
 chmod +x utils/session_key_tools/split_session_key.sh
 ```
 
-move on to Step 4.
+( now move on to Step 4 )
 
 ### 3.2 Build AyA-Node from Source Code
 
