@@ -22,10 +22,68 @@ Install dependencies:
 sudo apt upgrade && sudo apt update
 sudo apt install -y git clang curl libssl-dev llvm libudev-dev make protobuf-compiler pkg-config build-essential
 ```
-## 3. Set up Build Environment
+## 3. Install Aya Node
+
+You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
+
+### 3.1 Install AyA-Node from Precompiled Binaries
+
+[Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
+
+Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
+
+```bash
+cd /home/${USER}
+mkdir -p aya-node/target/release
+cd aya-node
+wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
+wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
+chmod +x target/release/aya-node
+```
+
+We also need to create the script that we will use later to split our rotated session keys.
+
+```bash
+mkdir -p utils/session_key_tools
+nano utils/session_key_tools/split_session_key.sh
+```
+
+
+Paste in the following text into Nano and save with CTRL-X
+```bash
+#!/usr/bin/env bash
+set -e
+
+if [[ $# -ne 1 ]]; then
+    echo "Please provide a session key as parameter to the script!"
+    exit 1
+else
+    SESSION_KEY=$1
+    if [[ ! ${#SESSION_KEY} -eq 194 ]]; then
+        echo "Please provide a valid session key!"
+        exit 1
+    fi
+fi
+
+echo "------------------------------------"
+echo "Your session keys:"
+echo AURA_SESSION_KEY=${SESSION_KEY:0:66}
+echo GRANDPA_SESSION_KEY=0x${SESSION_KEY:66:64}
+echo IM_ONLINE_SESSION_KEY=0x${SESSION_KEY:130:64}
+echo "------------------------------------"
+```
+Now make the file executable
+```bash
+chmod +x utils/session_key_tools/split_session_key.sh
+```
+
+( now move on to Step 4 )
+
+### 3.2 Build AyA-Node from Source Code
+
+We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
 
 Install Rust: 
-
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
@@ -54,36 +112,6 @@ Check Rust Installation:
 rustup show
 ```
 
-### 3.1 Install AyA-Node from Precompiled Binaries
-
-You can either use precomplied binaries to install aya-node or build the aya-node from source code (as described in 3.2)
-
-[Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
-
-Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
-
-```bash
-cd /home/${USER}
-mkdir -p aya-node/target/release
-cd aya-node
-wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
-wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
-chmod +x target/release/aya-node
-```
-
-We also need to download the script that we will use later to split our rotated session keys.
-
-```bash
-mkdir -p utils/session_key_tools
-wget -P utils/session_key_tools https://github.com/worldmobilegroup/aya-node/blob/main/utils/session_key_tools/split_session_key.sh
-chmod +x utils/session_key_tools/split_session_key.sh
-```
-
-( now move on to Step 4 )
-
-### 3.2 Build AyA-Node from Source Code
-
-We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
 
 Clone the AyA-Node Repository:
 ```bash
