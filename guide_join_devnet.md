@@ -396,6 +396,7 @@ Go to the [Talisman Website](https://www.talisman.xyz/) and follow the instructi
 #### Restore or Generate a Ethereum Wallet
 
 Use your mnemonic seed to restore the wallet in Talisman or create a new Ethereum account. 
+![Import_Wallet](assets/account_type.png)
 
 #### Add AyA DevNet to Talisman
 
