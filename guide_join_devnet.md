@@ -34,7 +34,7 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
 
-To allow port `30333` and ssh access on port 22 in ufw on your Validator do:
+To allow port `30333` and ssh access on port `22` in ufw on your Validator do:
 ```bash
 sudo ufw allow 30333
 sudo ufw limit proto tcp from any to any port 22
