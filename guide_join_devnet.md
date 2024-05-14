@@ -40,10 +40,7 @@ sudo ufw allow 30333
 sudo ufw limit proto tcp from any to any port 22
 ```
 
-The RPC port on your Validator should be blocked from the outside:
-```bash
-sudo ufw deny 9944
-```
+The RPC port `9944` on your Validator should be blocked from the outside.  This is already covered by our default deny incoming.
 
 Enable the firewall:
 ```bash
