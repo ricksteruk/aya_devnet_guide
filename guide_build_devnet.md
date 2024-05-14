@@ -456,6 +456,8 @@ Go to the [Faucet](https://devnet-faucet.worldmobilelabs.com/) paste your EVM ac
 
 ![Faucet](assets/faucet.png)
 
+If you go back to Talisman you will notice that it shows you have 20 FERN. These are actually the same 10 FERN tokens being viewed both from the Etherum connection and the Polkadot connection the Aya DevNet.  You only really have 10 FERN tokens.
+
 ### Access the Front-End
 
 Go to the Polkadot-JS development front-end and connect your Talisman wallet and account to the Polkadot-JS front end. You should see your account now on the webiste when you navigate to [Accounts](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fdevnet-rpc.worldmobilelabs.com%3A#/accounts). If the setup of the RPC endpoints worked correctly you are able to sign and submit transactions with that account.
