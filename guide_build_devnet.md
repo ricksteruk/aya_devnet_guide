@@ -27,20 +27,26 @@ The p2p port `30333` needs to be open so your Validator can communicate, either 
 Make sure the port is open in your cloud / network configuration.
 
 ### Set Up UFW Firewall
-To allow port `30333` and ssh access in ufw on your Validator do:
+First set some defaults
 ```bash
-sudo ufw allow 30333
-sudo ufw allow ssh
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 ```
 
-The RPC port on your Validator should be blocked from the outside:
+To allow port `30333` and ssh access on port `22` in ufw on your Validator do:
 ```bash
-sudo ufw deny 9944
+sudo ufw allow 30333
+sudo ufw limit proto tcp from any to any port 22
 ```
+
+The RPC port `9944` on your Validator should be blocked from the outside.  This is already covered by our default deny incoming.
 
 Enable the firewall:
 ```bash
 sudo ufw enable
+sudo ufw reload
+sudo systemctl restart ssh
+sudo ufw status
 ```
 
 ## 3. Install Aya Node
