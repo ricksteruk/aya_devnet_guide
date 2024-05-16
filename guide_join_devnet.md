@@ -15,7 +15,7 @@ Storage: ~250 GB
 ## 2. Set up Operating System
 
 Login to your server and access the terminal, for example using SSH connection. 
-'do not use the root user - you will need to create a new user account and add it to sudo group'
+`do not use the root user - you will need to create a new user account and add it to sudo group`
 
 
 Install dependencies: 
