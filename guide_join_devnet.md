@@ -238,7 +238,7 @@ Secret phrase:       bottom drive obey lake curtain smoke basket hold race lonel
 
 You should make a copy of these keys and keep them safe!
 
-Inspect key:
+Inspect key: (example below is for inspecting ALICE's seed phrase - replace it with your own seed )
 ```bash
 ./target/release/aya-node key inspect "bottom drive obey lake curtain smoke basket hold race lonely fit walk"
 ```
