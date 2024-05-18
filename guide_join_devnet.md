@@ -467,7 +467,7 @@ You have done all it needs, the only thing left is to let us know about your val
 
 To fill the form you will need:
 - the fingerprint of you ENNFT on Cardano mainnet
-- the address you used to register you session keys
+- the address you used to register you session keys ( Talisman Ethereum wallet address )
 - your valid email address
 - your discord username
 
