@@ -32,7 +32,7 @@ Untar and move the downloaded Node Exporter binary
 tar -xvf node_exporter-1.0.1.linux-amd64.tar.gz
 mv node_exporter-1.0.1.linux-amd64 node_exporter-files
 ```
-###Install Node Exporter
+### Install Node Exporter
 
 Copy node_exporter binary from node_exporter-files folder to /usr/bin and change the ownership to prometheus user.
 
@@ -41,7 +41,7 @@ sudo cp node_exporter-files/node_exporter /usr/bin/
 sudo chown node_exporter:node_exporter /usr/bin/node_exporter
 ```
 
-###Setup Node Exporter Service
+### Setup Node Exporter Service
 
 Create a node_exporter service file.
 
