@@ -1,12 +1,12 @@
 ### WARNING!  THIS PAGE IS IN PROGRESS - DO NOT FOLLOW IT YET!!
 
-# Prometheus Node Exporter Setup
+## Prometheus Node Exporter Setup
 
 `This is optional, but to enables us gather metrics from each server running Aya-Node`
 
 The Node Exporter is an agent that gathers system metrics and exposes them in a format which can be ingested by Prometheus. The Node Exporter is a project that is maintained through the Prometheus project. This is a completely optional step and can be skipped if you do not wish to gather system metrics. The following will need to be performed on each server that you wish to monitor system metrics for.
 
-## Download Node Exporter
+### Download Node Exporter
 
 Download the Node Exporter binary to each server that you want to monitor.
 
@@ -15,15 +15,17 @@ Download the Node Exporter binary to each server that you want to monitor.
 ```
 Visit the Prometheus downloads page for the latest version.
 
-Create User
+### Create User
 
 Create a Node Exporter user, required directories, and make prometheus user as the owner of those directories.
 
+```
 sudo groupadd -f node_exporter
 sudo useradd -g node_exporter --no-create-home --shell /bin/false node_exporter
 sudo mkdir /etc/node_exporter
 sudo chown node_exporter:node_exporter /etc/node_exporter
-Unpack Node Exporter Binary
+```
+### Unpack Node Exporter Binary
 
 Untar and move the downloaded Node Exporter binary
 
