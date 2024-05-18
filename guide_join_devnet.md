@@ -236,6 +236,7 @@ Secret phrase:       bottom drive obey lake curtain smoke basket hold race lonel
   SS58 Address:      5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
 ```
 
+You should make a copy of these keys and keep them safe!
 
 Inspect key:
 ```bash
