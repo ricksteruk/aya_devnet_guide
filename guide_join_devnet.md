@@ -59,6 +59,8 @@ sudo ufw status
 
 Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide aims to be compatible with building from source code so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
 
+NOTE: `${USER}` is a global variable that returns your username.  You do not need to replace this!
+
 ```bash
 cd /home/${USER}
 mkdir -p aya-node/target/release
