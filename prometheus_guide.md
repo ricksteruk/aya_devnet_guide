@@ -71,9 +71,9 @@ WantedBy=multi-user.target
 sudo chmod 664 /usr/lib/systemd/system/node_exporter.service
 ``` 
 
-### Index Admin Port and cannot be used.
+(missing text here.. ) Index Admin Port and cannot be used.
 
-Reload systemd and Start Node Exporter
+### Reload systemd and Start Node Exporter
 
 Reload the systemd service to register the prometheus service and start the prometheus service.
 
@@ -86,6 +86,18 @@ Check the node exporter service status using the following command.
 
 ```
 sudo systemctl status node_exporter
+```
+
+Example output:
+```
+• node
+_exporter. service - Node Exporter
+Activate tuning since can a t vender preset: disabled)
+17h ago
+Docs: https://prometheus.io/docs/guides/node-exporter/
+Main PID: 27646 (node_exporter)
+CGroup: /system.slice/node_exporter.service
+-27646 /usr/local/bin/node_exporter --web.listen-address=:9200
 ```
 
 ### Node Exporter Status
