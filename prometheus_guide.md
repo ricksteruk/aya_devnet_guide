@@ -17,7 +17,7 @@ Visit the Prometheus downloads page for the latest version. (https://prometheus.
 
 ### Create User
 
-Create a Node Exporter user, required directories, and make prometheus user as the owner of those directories.
+Create a Node Exporter user, required directories, and make Node Exporter user the owner of those directories.
 
 ```
 sudo groupadd -f node_exporter
