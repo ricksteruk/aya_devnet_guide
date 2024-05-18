@@ -137,6 +137,7 @@ echo "${AYA_HOME}/target/release/aya-node \
     --port 30333 \
     --rpc-port 9944 \
     --log info \
+    --prometheus-external \
     --bootnodes /dns/devnet-rpc.worldmobilelabs.com/tcp/30340/ws/p2p/12D3KooWRWZpEJygTo38qwwutM1Yo7dQQn8xw1zAAWpfMiAqbmyK" >> start_aya_validator.sh
 sudo chmod +x ./start_aya_validator.sh
 ```
