@@ -210,7 +210,7 @@ In case your systemd service is not working properly you can find debugging info
 If everything worked out you should have a running full node / validator which is syncing with the blockchain (but not validating blocks).
 You can see in the logs that the node is importing blocks. 
 
-If you just want to setup a full node you can stop here. 
+(If you just wanted to setup a full node and not a validator you can stop here.)
 
 
 ## 5. Prepare Key Setup
