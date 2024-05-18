@@ -13,7 +13,7 @@ Download the Node Exporter binary to each server that you want to monitor.
 ```wget \
   https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
 ```
-Visit the Prometheus downloads page for the latest version.
+Visit the Prometheus downloads page for the latest version. (https://prometheus.io/download/)
 
 ### Create User
 
