@@ -96,7 +96,7 @@ Example output:
     Docs: https://prometheus.io/docs/guides/node-exporter/
 Main PID: 27646 (node_exporter)
   CGroup: /system.slice/node_exporter.service
-            -27646 /usr/local/bin/node_exporter --web.listen-address=:9200
+            -27646 /usr/local/bin/node_exporter --web.listen-address=:9100
 ```
 
 Configure node_exporter to start at boot
