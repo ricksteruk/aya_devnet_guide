@@ -8,7 +8,7 @@ The Node Exporter is an agent that gathers system metrics and exposes them in a 
 
 ## Download Node Exporter
 
-Download the Node Exporter binary to each Couchbase Server that you want to monitor. The Node Exporter will export system related stats.
+Download the Node Exporter binary to each server that you want to monitor.
 
 ```wget \
   https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
