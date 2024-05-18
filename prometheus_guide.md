@@ -111,6 +111,7 @@ sudo firewall-cmd --reload
 ### Verify Node Exporter is Running
 
 Verify the exporter is running by visiting the `/metrics` endpoint on the node on port `9100`
+(enter your own node's ip address in the text below)
 ```
 http://<node_exporter-ip>:9100/metrics
 ```
