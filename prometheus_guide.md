@@ -94,16 +94,16 @@ Configure node_exporter to start at boot
 ```
 sudo systemctl enable node_exporter.service
 ```
-If firewalld is enabled and running, add a rule for port 9200
+If firewalld is enabled and running, add a rule for port 9100
 ```
 sudo firewall-cmd --permanent --zone=public --add-port=9200/tcp
 sudo firewall-cmd --reload
 ```
 ### Verify Node Exporter is Running
 
-Verify the exporter is running by visiting the /metrics endpoint on the node on port 9200
+Verify the exporter is running by visiting the /metrics endpoint on the node on port 9100
 ```
-http://<node_exporter-ip>:9200/metrics
+http://<node_exporter-ip>:9100/metrics
 ```
 You should be able to see something similar to the following:
 
