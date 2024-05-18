@@ -64,14 +64,12 @@ Group=node_exporter
 Type=simple
 Restart=on-failure
 ExecStart=/usr/bin/node_exporter \
-  --web.listen-address=:9200
+  --web.listen-address=:9100
 
 [Install]
 WantedBy=multi-user.target
 sudo chmod 664 /usr/lib/systemd/system/node_exporter.service
-```
-
-** Note: The default port for the node_exporter is actually :9100 but that is the same port as the Couchbase 
+``` 
 
 ### Index Admin Port and cannot be used.
 
