@@ -90,17 +90,14 @@ sudo systemctl status node_exporter
 
 Example output:
 ```
-• node
-_exporter. service - Node Exporter
-Activate tuning since can a t vender preset: disabled)
-17h ago
-Docs: https://prometheus.io/docs/guides/node-exporter/
+• node_exporter. service - Node Exporter
+  Loaded: loaded (/usr/lib.systemmd/system/node_expoerter_service; enabled; vender preset: disabled)
+  Active: active (running) Tue 2024-05-18 17:04:17 UTC; since 17h ago
+    Docs: https://prometheus.io/docs/guides/node-exporter/
 Main PID: 27646 (node_exporter)
-CGroup: /system.slice/node_exporter.service
--27646 /usr/local/bin/node_exporter --web.listen-address=:9200
+  CGroup: /system.slice/node_exporter.service
+            -27646 /usr/local/bin/node_exporter --web.listen-address=:9200
 ```
-
-### Node Exporter Status
 
 Configure node_exporter to start at boot
 ```
