@@ -2,9 +2,8 @@
 
 Prometheus Node Exporter Setup
 
-
 This is optional, but enables system metric ingestion using the Node Exporter agent
-Learn how to gather metrics from each server running Couchbase
+Learn how to gather metrics from each server running Aya-Node
 The Node Exporter is an agent that gathers system metrics and exposes them in a format which can be ingested by Prometheus. The Node Exporter is a project that is maintained through the Prometheus project. This is a completely optional step and can be skipped if you do not wish to gather system metrics. The following will need to be performed on each server that you wish to monitor system metrics for.
 
 Download Node Exporter
