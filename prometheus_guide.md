@@ -122,7 +122,9 @@ The configuration file is divided into three parts which are `global`, `rule_fil
 With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want to have more precise information about the state of the Prometheus server we reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and `targets` determine where the exporters are running.  The second exporter is capturing the data from your aya node, and the port by default is `9615`
 
 You can check the validity of this configuration file by running:
-```promtool check config /etc/prometheus/prometheus.yml.```
+```
+promtool check config /etc/prometheus/prometheus.yml.
+```
 
 Save the configuration file and change the ownership of the file to prometheus user.
 
