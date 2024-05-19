@@ -208,6 +208,26 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 Prometheus should be running now, and you should be able to access its front again end by re-visiting `http://YOUR_SERVER_IP_ADDRESS:9090/graph`
 
 
+## Installing Grafana
+
+In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the following commands to install it first.
+
+```
+sudo apt-get install -y adduser libfontconfig1
+wget https://dl.grafana.com/oss/release/grafana_7.5.4_amd64.deb
+sudo dpkg -i grafana_7.5.4_amd64.deb
+```
+
+If everything is fine, configure Grafana to auto-start on boot and then start the service.
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+```
+
+You can now access it by going to the `http://YOUR_SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
+
 
 
 
