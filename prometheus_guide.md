@@ -89,7 +89,9 @@ sudo nano /etc/prometheus/prometheus.yml
 
 The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
-`scrape_interval` defines how often Prometheus scrapes targets, while evaluation_interval controls how often the software will evaluate rules.
+`global` / `scrape_interval` defines how often Prometheus scrapes targets
+
+`global` / `evaluation_interval` controls how often the software will evaluate rules.
 
 `rule_files` block contains information of the location of any rules we want the Prometheus server to load.
 
