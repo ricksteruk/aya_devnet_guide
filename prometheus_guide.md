@@ -228,8 +228,8 @@ sudo systemctl start grafana-server
 
 You can now access it by going to the `http://YOUR_SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
 
-NOTE
-If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo vim /usr/share/grafana/conf/defaults.ini` and change the http_port value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
+NOTE:
+If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo nano /usr/share/grafana/conf/defaults.ini` and change the http_port value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
 
 
 
