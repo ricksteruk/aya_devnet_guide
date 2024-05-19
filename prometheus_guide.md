@@ -303,6 +303,10 @@ ExecStart=/usr/bin/node_exporter \
 
 [Install]
 WantedBy=multi-user.target
+```
+
+Then run the following command
+```
 sudo chmod 664 /usr/lib/systemd/system/node_exporter.service
 ``` 
 
