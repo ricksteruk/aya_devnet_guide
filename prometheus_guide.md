@@ -1,4 +1,37 @@
-### WARNING!  THIS PAGE IS IN PROGRESS - DO NOT FOLLOW IT YET!!
+## WARNING!  THIS PAGE IS IN PROGRESS - DO NOT FOLLOW IT YET!!
+
+## Monitor your node
+
+This guide will walk you through how to set up Prometheus with Grafana to monitor your node.
+
+A Substrate-based chain like Aya exposes data such as the height of the chain, the number of connected peers to your node and more. To monitor this data, Prometheus is used to collect metrics and Grafana allows for displaying them on the dashboard.
+
+### Preparation
+
+First, create a user for Prometheus by adding the --no-create-home flag to disallow prometheus from logging in.
+
+```
+sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
+```
+
+Create the directories required to store the configuration and executable files.
+
+```
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
+```
+
+Change the ownership of these directories to prometheus so that only prometheus can access them.
+
+```
+sudo chown -R prometheus:prometheus /etc/prometheus
+sudo chown -R prometheus:prometheus /var/lib/prometheus
+```
+
+
+
+
+
 
 ## Prometheus Node Exporter Setup
 
