@@ -167,6 +167,46 @@ level=info ts=2021-04-16T19:02:20.234Z caller=main.go:975 msg="Completed loading
 level=info ts=2021-04-16T19:02:20.234Z caller=main.go:767 msg="Server is ready to receive web requests."
 ```
 
+On a web browser go to `http://YOUR_SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus interface or not. If it is working in your browser, exit the process by pressing on `CTRL + C`.
+
+Next, we would like to automatically start the server during the boot process, so we have to create a new systemd configuration file:
+
+```
+sudo nano /etc/systemd/system/prometheus.service
+```
+
+Paste in this configuration and save with `CTRL + X`
+```
+[Unit]
+  Description=Prometheus Monitoring
+  Wants=network-online.target
+  After=network-online.target
+
+[Service]
+  User=prometheus
+  Group=prometheus
+  Type=simple
+  ExecStart=/usr/local/bin/prometheus \
+  --config.file /etc/prometheus/prometheus.yml \
+  --storage.tsdb.path /var/lib/prometheus/ \
+  --web.console.templates=/etc/prometheus/consoles \
+  --web.console.libraries=/etc/prometheus/console_libraries
+  ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+  WantedBy=multi-user.target
+```
+
+Once the file is saved, execute the command below to reload systemd and enable the service so that it will be loaded automatically during the operating system's startup.
+
+```
+sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
+```
+
+Prometheus should be running now, and you should be able to access its front again end by re-visiting `http://YOUR_SERVER_IP_ADDRESS:9090/graph`
+
+
+
 
 
 
