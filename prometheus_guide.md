@@ -32,10 +32,49 @@ sudo chown -R prometheus:prometheus /etc/prometheus
 sudo chown -R prometheus:prometheus /var/lib/prometheus
 ```
 
+### Installing and Configuring Prometheus
 
+After setting up the environment, update your OS, and install the latest Prometheus. You can check the latest release by going to their GitHub repository under the releases page.
 
+```
+sudo apt-get update && apt-get upgrade
+wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+tar xfz prometheus-*.tar.gz
+cd prometheus-2.26.0.linux-amd64
+```
 
+The following two binaries are in the directory:
 
+: prometheus - Prometheus main binary file
+: promtool
+
+The following two directories (which contain the web interface, configuration files examples and the license) are in the directory:
+
+: consoles
+: console_libraries
+
+Copy the executable files to the /usr/local/bin/ directory.
+
+```
+sudo cp ./prometheus /usr/local/bin/
+sudo cp ./promtool /usr/local/bin/
+```
+
+Change the ownership of these files to the prometheus user.
+
+```
+sudo chown prometheus:prometheus /usr/local/bin/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/promtool
+```
+
+Copy the consoles and console_libraries directories to /etc/prometheus
+
+```
+sudo cp -r ./consoles /etc/prometheus
+sudo cp -r ./console_libraries /etc/prometheus
+```
+
+( more tobe added here )
 
 ## Prometheus Node Exporter Setup
 
