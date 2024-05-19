@@ -123,7 +123,7 @@ With the above configuration file, the first exporter is the one that Prometheus
 
 You can check the validity of this configuration file by running:
 ```
-promtool check config /etc/prometheus/prometheus.yml.
+promtool check config /etc/prometheus/prometheus.yml
 ```
 
 Save the configuration file and change the ownership of the file to prometheus user.
