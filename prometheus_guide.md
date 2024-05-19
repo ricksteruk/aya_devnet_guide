@@ -350,7 +350,7 @@ sudo ufw reload
 
 Verify the exporter is running by visiting the `/metrics` endpoint on the node on port `9100`
 ```
-http://<node_exporter-ip>:9100/metrics
+http://YOUR_SERVER_IP_ADDRESS:9100/metrics
 ```
 You should be able to see something similar to the following:
 
