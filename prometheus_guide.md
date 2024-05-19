@@ -310,7 +310,6 @@ Then run the following command
 sudo chmod 664 /usr/lib/systemd/system/node_exporter.service
 ``` 
 
-(missing text here.. ) Index Admin Port and cannot be used.
 
 ### Reload systemd and Start Node Exporter
 
