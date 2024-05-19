@@ -344,8 +344,8 @@ sudo systemctl enable node_exporter.service
 ```
 If firewalld is enabled and running, add a rule for port 9100
 ```
-sudo firewall-cmd --permanent --zone=public --add-port=9100/tcp
-sudo firewall-cmd --reload
+sudo ufw allow proto tcp from any to any port 9100
+sudo ufw reload
 ```
 ### Verify Node Exporter is Running
 
