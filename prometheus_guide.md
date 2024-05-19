@@ -381,5 +381,5 @@ go_memstats_alloc_bytes 919280
 Remove the download and temporary files
 
 ```
-rm -rf node_exporter-1.0.1.linux-amd64.tar.gz node_exporter-files
+rm -rf node_exporter-1.8.0.linux-amd64.tar.gz node_exporter-files
 ```
