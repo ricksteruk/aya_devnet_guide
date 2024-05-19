@@ -87,6 +87,31 @@ Before using Prometheus, it needs some configuration. Create a YAML configuratio
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
+Copy the following text, paste in the editor, and save with CTRL-X
+
+`NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
+
+```
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "aya_node"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9615"]
+```
+
+
 The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
 `global` / `scrape_interval` defines how often Prometheus scrapes targets
@@ -96,8 +121,6 @@ The configuration file is divided into three parts which are `global`, `rule_fil
 `rule_files` block contains information of the location of any rules we want the Prometheus server to load.
 
 `scrape_configs` contains the information which resources Prometheus monitors.
-
-The configuration file should look like this below:
 
 
 ( more to be added here )
