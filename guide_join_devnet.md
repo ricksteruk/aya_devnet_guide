@@ -262,7 +262,7 @@ Enter your Secret Seed keys from Step 5 above:  ( REPLACE THIS EXAMPLE SECRET SE
 export SECRET_SEED=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
 ```
 
-Now just Copy and Paste the code below - it uses the SECRET SEED variable you just entered in the previous step
+Now just Copy and Paste the code below - it uses the `SECRET_SEED` variable you just entered in the previous step
 
 ```bash
 ./target/release/aya-node key insert \
