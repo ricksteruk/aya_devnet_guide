@@ -259,7 +259,7 @@ You also need to set the base path of the node, the path were all data for the n
 
 Enter your Secret Seed keys from Step 5 above:  ( REPLACE THIS EXAMPLE SECRET SEED WITH YOUR OWN!! )
 ```bash
-export SECRET_SEED=0xfac7959dbfe72f052e5a0c3c8d6530f202b02fd8f9f5ca3580ec8deb7797479e
+export SECRET_SEED=0xe5be9a5092b81bca64be81d212e7f2f9eba183bb7a90954f7b76361f6edb5c0a
 ```
 
 Now just Copy and Paste the code below - it uses the `SECRET_SEED` variable you just entered in the previous step
