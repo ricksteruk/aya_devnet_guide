@@ -47,7 +47,7 @@ There are two binaries in the directory: `prometheus` - the Prometheus main bina
 
 `consoles` and `console_libraries` directories contain the web interface, configuration files examples and the license.
 
-Copy the executable files to the /usr/local/bin/ directory.
+Copy the executable files to the `/usr/local/bin/` directory.
 
 ```
 sudo cp ./prometheus /usr/local/bin/
@@ -61,7 +61,7 @@ sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 ```
 
-Copy the consoles and console_libraries directories to /etc/prometheus
+Copy the consoles and console_libraries directories to `/etc/prometheus`
 
 ```
 sudo cp -r ./consoles /etc/prometheus
@@ -81,19 +81,19 @@ Once everything is done, run this command to remove prometheus directory.
 cd .. && rm -rf prometheus*
 ```
 
-Before using Prometheus, it needs some configuration. Create a YAML configuration file named prometheus.yml by running the command below.
+Before using Prometheus, it needs some configuration. Create a YAML configuration file named `prometheus.yml` by running the command below.
 
 ```
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-The configuration file is divided into three parts which are global, rule_files, and scrape_configs.
+The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
-scrape_interval defines how often Prometheus scrapes targets, while evaluation_interval controls how often the software will evaluate rules.
+`scrape_interval` defines how often Prometheus scrapes targets, while evaluation_interval controls how often the software will evaluate rules.
 
-rule_files block contains information of the location of any rules we want the Prometheus server to load.
+`rule_files` block contains information of the location of any rules we want the Prometheus server to load.
 
-scrape_configs contains the information which resources Prometheus monitors.
+`scrape_configs` contains the information which resources Prometheus monitors.
 
 The configuration file should look like this below:
 
