@@ -43,9 +43,9 @@ tar xfz prometheus-*.tar.gz
 cd prometheus-2.26.0.linux-amd64
 ```
 
-There are two binaries are in the directory: `prometheus` - Prometheus main binary file, `promtool`
+There are two binaries in the directory: `prometheus` - the Prometheus main binary file, `promtool`
 
-The following two directories (which contain the web interface, configuration files examples and the license) are in the directory: `consoles` and `console_libraries`
+`consoles` and `console_libraries` directories contain the web interface, configuration files examples and the license.
 
 Copy the executable files to the /usr/local/bin/ directory.
 
