@@ -114,15 +114,12 @@ scrape_configs:
 
 The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
-`global` / `scrape_interval` defines how often Prometheus scrapes targets
-
-`global` / `evaluation_interval` controls how often the software will evaluate rules.
-
-`rule_files` block contains information of the location of any rules we want the Prometheus server to load.
-
+`global` / `scrape_interval` defines how often Prometheus scrapes targets <br>
+`global` / `evaluation_interval` controls how often the software will evaluate rules <br>
+`rule_files` block contains information of the location of any rules we want the Prometheus server to load <br>
 `scrape_configs` contains the information which resources Prometheus monitors.
 
-With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want to have more precise information about the state of the Prometheus server we reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and `targets` determine where the exporters are running. <br> The second exporter is capturing the data from your node, and the port by default is `9615`.
+With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want to have more precise information about the state of the Prometheus server we reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and `targets` determine where the exporters are running.  The second exporter is capturing the data from your node, and the port by default is `9615`.
 
 You can check the validity of this configuration file by running:
 ```promtool check config /etc/prometheus/prometheus.yml.```
