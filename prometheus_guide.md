@@ -87,7 +87,7 @@ Before using Prometheus, it needs some configuration. Create a YAML configuratio
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-Copy the following text, paste in the editor, and save with `CTRL + X`
+Copy and Paste the following configuration into the editor and save with `CTRL + X`
 
 `NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
 
@@ -177,7 +177,7 @@ Next, we would like to automatically start the server during the boot process, s
 sudo nano /etc/systemd/system/prometheus.service
 ```
 
-Paste in this configuration and save with `CTRL + X`
+Copy and Paste the following configuration into the editor and save with `CTRL + X`
 ```
 [Unit]
   Description=Prometheus Monitoring
