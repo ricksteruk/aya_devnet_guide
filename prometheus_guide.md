@@ -264,8 +264,8 @@ sudo chown node_exporter:node_exporter /etc/node_exporter
 
 Untar and move the downloaded Node Exporter binary
 ```
-tar -xvf node_exporter-1.0.1.linux-amd64.tar.gz
-mv node_exporter-1.0.1.linux-amd64 node_exporter-files
+tar -xvf node_exporter-1.8.0.linux-amd64.tar.gz
+mv node_exporter-1.8.0.linux-amd64 node_exporter-files
 ```
 ### Install Node Exporter
 
