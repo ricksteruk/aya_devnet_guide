@@ -245,8 +245,8 @@ The Node Exporter is an agent that gathers system metrics and exposes them in a 
 
 Download the Node Exporter binary to each server that you want to monitor.
 
-```wget \
-  https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
 ```
 Visit the Prometheus downloads page for the latest version. (https://prometheus.io/download/)
 
