@@ -281,10 +281,10 @@ sudo chown node_exporter:node_exporter /usr/bin/node_exporter
 Create a node_exporter service file.
 
 ```
-sudo vi /usr/lib/systemd/system/node_exporter.service
+sudo nano /usr/lib/systemd/system/node_exporter.service
 ```
 
-Add the following configuration
+Copy and Past the following configuration, then save with `CTRL + X`
 
 ```
 [Unit]
