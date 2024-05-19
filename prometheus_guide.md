@@ -327,7 +327,7 @@ Check the node exporter service status using the following command.
 sudo systemctl status node_exporter
 ```
 
-Example output:
+Example output: ( press `CTRL + C` to exit )
 ```
 • node_exporter. service - Node Exporter
   Loaded: loaded (/usr/lib.systemmd/system/node_expoerter_service; enabled; vender preset: disabled)
