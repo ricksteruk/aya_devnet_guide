@@ -1,8 +1,6 @@
-## WARNING!  THIS PAGE IS IN PROGRESS - DO NOT FOLLOW IT YET!!
-
 ## Monitor your node
 
-This guide will walk you through how to set up Prometheus with Grafana to monitor your node.
+This guide will walk you through how to set up Prometheus with Grafana to monitor your node with a basic dashbaord.
 
 A Substrate-based chain like Aya exposes data such as the height of the chain, the number of connected peers to your node and more. To monitor this data, Prometheus is used to collect metrics and Grafana allows for displaying them on the dashboard.
 
