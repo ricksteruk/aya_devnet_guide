@@ -359,7 +359,6 @@ rm -rf node_exporter-1.8.0.linux-amd64.tar.gz node_exporter-files
 ---
 Now we must edit the Prometheus YAML configuration file so that Prometheus scrapes the Node Exporter on port 9100.  We will add another target onto our existing `aya-node` job
 
-Enter the editor
 ```
 sudo nano /etc/prometheus/prometheus.yml
 ```
