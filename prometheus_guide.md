@@ -429,7 +429,7 @@ Now you will need to enter `http://<your_actual_node_IP:address:9090>` localhost
 
 ![EnterURL](monitoring_assets/prometheus_add_url.png)
 
-Scroll to the bottom of the page and click `Save and Test` - hopefully you will get a message that the test was sucessful!
+Scroll to the bottom of the page and click `Save and Test`.  Hopefully you will get a message that the test was sucessful!
 
 ## Installing your first Dashboard.
 
