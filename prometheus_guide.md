@@ -431,4 +431,15 @@ Now you will need to enter `http://<your_actual_node_IP:address:9090>` localhost
 
 ![EnterURL](monitoring_assets/prometheus_add_url.png)
 
+Scroll to the bottom of the page and click `Save and Test` - hopefully you will get a message that the test was sucessful!
+
+## Installing your first Dashboard.
+
+Click on `Dashboards` in the left hand side menu bar, and then click `New` and select `import` from the dropdown menu 
+
+![EnterURL](monitoring_assets/dashboard_new_import.png)
+
+Here is what it should look like!
+
+![EnterURL](monitoring_assets/aya_grafana_template.png)
 
