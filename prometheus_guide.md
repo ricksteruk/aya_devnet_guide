@@ -422,7 +422,7 @@ If you want to change the port on which Grafana runs (3000 is a popular port), e
 
 ### Setting up Grafana
 
-First we need to select a data source.  Go to Connections > Add new connection.  Search for Prometheus and select
+First we need to select a data source.  Go to Connections > Add new connection.  Search for Prometheus and select it.
 
 ![AddDataSource](monitoring_assets/grafana_add_data.png)
 
