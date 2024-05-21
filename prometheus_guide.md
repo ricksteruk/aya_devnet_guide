@@ -233,11 +233,10 @@ If you want to change the port on which Grafana runs (3000 is a popular port), e
 
 
 
-( more to be added here )
 
 ## Prometheus Node Exporter Setup
 
-`This is optional, but enables us to gather system metrics from each server running Aya-Node`
+`This is optional, but enables us to gather system metrics like CPU and RAM usage from each server running Aya-Node`
 
 The Node Exporter is an agent that gathers system metrics and exposes them in a format which can be ingested by Prometheus. The Node Exporter is a project that is maintained through the Prometheus project. This is a completely optional step and can be skipped if you do not wish to gather system metrics. The following will need to be performed on each server that you wish to monitor system metrics for.
 
@@ -284,7 +283,7 @@ Create a node_exporter service file.
 sudo nano /usr/lib/systemd/system/node_exporter.service
 ```
 
-Copy and Past the following configuration, then save with `CTRL + X`
+Copy and Paste the following configuration, then save with `CTRL + X`
 
 ```
 [Unit]
