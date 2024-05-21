@@ -364,9 +364,9 @@ Enter the editor
 sudo nano /etc/prometheus/prometheus.yml
 ```
 
-Copy and Paste the following configuration into the editor and save with `CTRL + X`
+Enter `"localhost:9100"` to the `aya_nodez target and save the configuration with `CTRL + X`
 
-`NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
+`NOTE: If your aya node is on a different server to prometheus replace localhost:9100 with <your-nodes-ipaddress>:9100`
 
 ```
 global:
