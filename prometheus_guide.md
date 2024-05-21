@@ -440,7 +440,7 @@ I have provided a basic dashbaord to monitor your aya node to get you started, i
 
 Look in the `monitoring_assets` folder in this repo and download the `aya_node_template.json` to your desktop
 
-Click on `Dashboards` in the left hand side menu bar, and then click `New` and select `import` from the dropdown menu 
+In Grafana click on `Dashboards` in the left hand side menu bar, and then click `New` and select `import` from the dropdown menu 
 
 ![EnterURL](monitoring_assets/dashboard_new_import.png)
 
