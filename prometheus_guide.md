@@ -423,5 +423,6 @@ If you want to change the port on which Grafana runs (3000 is a popular port), e
 
 First we need to select a data source.  Go to Connections > add new connection
 
+![AddDataSource](monitoring_assets/grafana_add_data.png)
 
-
+HELLO!
