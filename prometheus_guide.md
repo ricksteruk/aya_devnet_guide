@@ -8,6 +8,9 @@ It is good practice to install Prometheus and Grafana on separate servers to you
 
 For testing purposes it is possible to run Prometheus and Grafana on the same sever as your node.  For brevity we will assume that this is the case and so the guide will use `localhost` as the address for the various servers.  For a secure setup you should replace localhost with your relvant server ip address.
 
+`THE STEPS IN THIS GUIDE ARE FOR TESTING PURPOSES - DO NOT USE IN A PRODUCTION SETTING`
+
+
 ### Preparation
 
 First, create a user for Prometheus by adding the --no-create-home flag to disallow prometheus from logging in.
