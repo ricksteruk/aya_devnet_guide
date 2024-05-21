@@ -427,7 +427,7 @@ First we need to select a data source.  Go to Connections > Add new connection. 
 
 On the next screen click the `Add New Data Source` button.
 
-On the following screen you need to enter your actual node IP address, localhost will not work.
+Now you will need to enter `http://<your_actual_node_IP:address:9090>` localhost will not work.
 
 ![EnterURL](monitoring_assets/prometheus_add_url.png)
 
