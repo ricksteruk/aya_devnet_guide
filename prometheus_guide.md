@@ -445,7 +445,9 @@ Click on `Dashboards` in the left hand side menu bar, and then click `New` and s
 
 Now upload the `aya_node_template.json` file by dragging it from your desktop into the grafana window.
 
-Click IMPORT
+![EnterURL](UploadJson/upload_json.png)
+
+Click `Load`
 
 Here is what it should look like!
 
