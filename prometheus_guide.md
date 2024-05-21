@@ -356,6 +356,45 @@ Remove the download and temporary files
 rm -rf node_exporter-1.8.0.linux-amd64.tar.gz node_exporter-files
 ```
 
+---
+Now we must edit the Prometheus YAML configuration file so that Prometheus scrapes the Node Exporter on port 9100.  We will add another target onto our existing `aya-node` job
+
+Enter the editor
+```
+sudo nano /etc/prometheus/prometheus.yml
+```
+
+Copy and Paste the following configuration into the editor and save with `CTRL + X`
+
+`NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
+
+```
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "aya_node"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9615","localhost:9100"]
+```
+
+Now restart the Prometheus service.
+
+```
+sudo systemctl restart prometheus
+```
+
+---
 
 ## Installing Grafana
 
