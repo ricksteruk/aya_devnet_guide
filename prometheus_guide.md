@@ -213,9 +213,9 @@ Prometheus should be running now, and you should be able to access its front aga
 In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the following commands to install it first.
 
 ```
-sudo apt-get install -y adduser libfontconfig1
-wget https://dl.grafana.com/oss/release/grafana_7.5.4_amd64.deb
-sudo dpkg -i grafana_7.5.4_amd64.deb
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.0.0_amd64.deb
+sudo dpkg -i grafana_11.0.0_amd64.deb
 ```
 
 If everything is fine, configure Grafana to auto-start on boot and then start the service.
