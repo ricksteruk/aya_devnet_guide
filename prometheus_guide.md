@@ -454,6 +454,6 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
-Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods.  Stay Tuned :D
+Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
- [Granafa Telegram Alerts Guide]([https://grafana.com/blog/2023/12/28/how-to-integrate-grafana-alerting-and-telegram])
+Check out the [Granafa Telegram Alerts Guide](https://grafana.com/blog/2023/12/28/how-to-integrate-grafana-alerting-and-telegram)
