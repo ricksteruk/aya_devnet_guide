@@ -6,7 +6,7 @@ A Substrate-based chain like Aya exposes data such as the height of the chain, t
 
 It is good practice to install Prometheus and Grafana on separate servers to your node(s) - that way if your node goes down the system can still send you alerts.  These should ideally be connected by a VPN such as Tailscale, rather than just opening the relevant ports for Prometheus and Grafana on each server.
 
-For testing purposes it is possible to run Prometheus and Grafana on the same sever as your node.  For brevity we will assume that this is the case and so the guide will use `localhost` as the address for the various servers.  For a secure setup you should replace localhost with your relvant server ip address.
+For testing purposes it is possible to run Prometheus and Grafana on the same sever as your node.  For brevity we will assume that this is the case and so the guide will use `localhost` as the address for the various servers.  For a secure setup you should replace localhost with your relevant server ip address.
 
 `THE STEPS IN THIS GUIDE ARE FOR TESTING PURPOSES - DO NOT USE IN A PRODUCTION SETTING`
 
