@@ -435,9 +435,17 @@ Scroll to the bottom of the page and click `Save and Test` - hopefully you will 
 
 ## Installing your first Dashboard.
 
+I have provided a basic dashbaord to monitor your aya node to get you started, it is based on a substrate node template.
+
+Look in the `monitoring_assets` folder in this repo and download the `aya_node_template.json` to your desktop
+
 Click on `Dashboards` in the left hand side menu bar, and then click `New` and select `import` from the dropdown menu 
 
 ![EnterURL](monitoring_assets/dashboard_new_import.png)
+
+Now upload the `aya_node_template.json` file by dragging it from your desktop into the grafana window.
+
+Click IMPORT
 
 Here is what it should look like!
 
