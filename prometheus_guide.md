@@ -208,35 +208,9 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 Prometheus should be running now, and you should be able to access its front again end by re-visiting `http://YOUR_SERVER_IP_ADDRESS:9090/graph`
 
 
-## Installing Grafana
-
-In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the following commands to install it first.
-
-```
-sudo apt-get install -y adduser libfontconfig1 musl
-wget https://dl.grafana.com/oss/release/grafana_11.0.0_amd64.deb
-sudo dpkg -i grafana_11.0.0_amd64.deb
-```
-
-If everything is fine, configure Grafana to auto-start on boot and then start the service.
-
-```
-sudo systemctl daemon-reload
-sudo systemctl enable grafana-server
-sudo systemctl start grafana-server
-```
-
-You can now access it by going to the `http://YOUR_SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
-
-NOTE:
-If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo nano /usr/share/grafana/conf/defaults.ini` and change the http_port value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
-
-
-
-
 ## Prometheus Node Exporter Setup
 
-`This is optional, but enables us to gather system metrics like CPU and RAM usage from each server running Aya-Node`
+`This is optional, but recommended as it enables us to gather system metrics like CPU and RAM usage from each server running Aya-Node.  If you do not want to be able to view your node system metrics on your Grafana dashboard than move on to the Grafana section`
 
 The Node Exporter is an agent that gathers system metrics and exposes them in a format which can be ingested by Prometheus. The Node Exporter is a project that is maintained through the Prometheus project. This is a completely optional step and can be skipped if you do not wish to gather system metrics. The following will need to be performed on each server that you wish to monitor system metrics for.
 
@@ -381,3 +355,30 @@ Remove the download and temporary files
 ```
 rm -rf node_exporter-1.8.0.linux-amd64.tar.gz node_exporter-files
 ```
+
+
+## Installing Grafana
+
+In order to visualize your node metrics, you can use Grafana to query the Prometheus server. Run the following commands to install it first.
+
+```
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.0.0_amd64.deb
+sudo dpkg -i grafana_11.0.0_amd64.deb
+```
+
+If everything is fine, configure Grafana to auto-start on boot and then start the service.
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+```
+
+You can now access it by going to the `http://YOUR_SERVER_IP_ADDRESS:3000/login`. The default user and password is admin/admin.
+
+NOTE:
+If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo nano /usr/share/grafana/conf/defaults.ini` and change the http_port value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
+
+
+
