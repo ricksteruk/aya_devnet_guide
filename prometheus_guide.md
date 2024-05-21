@@ -451,4 +451,4 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
-Enjoy your new dashboard!  It is possible to set up alerts by various means.  A guide to setting up Telegram alerts will follow!
+Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods.  Stay Tuned :D
