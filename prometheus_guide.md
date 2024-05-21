@@ -419,4 +419,9 @@ NOTE:
 If you want to change the port on which Grafana runs (3000 is a popular port), edit the file `/usr/share/grafana/conf/defaults.ini` with a command like `sudo nano /usr/share/grafana/conf/defaults.ini` and change the http_port value to something else. Then restart grafana with `sudo systemctl restart grafana-server`.
 
 
+### Setting up Grafana
+
+First we need to select a data source.  Go to Connections > add new connection
+
+
 
