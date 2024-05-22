@@ -454,7 +454,7 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
-`NOTE - If the data source is not connecting you will need to update the data source to the one that you have just created.`
+`NOTE - If the data source is not connecting you need to update the data source to the one that you just created.`
 
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
