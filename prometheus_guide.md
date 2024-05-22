@@ -39,7 +39,7 @@ After setting up the environment, update your OS, and install the latest Prometh
 
 ```
 sudo apt-get update && apt-get upgrade
-wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.darwin-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.linux-amd64.tar.gz
 tar xfz prometheus-*.tar.gz
 cd prometheus-2.52.0.linux-amd64
 ```
@@ -221,7 +221,7 @@ The Node Exporter is an agent that gathers system metrics and exposes them in a 
 Download the Node Exporter binary to each server that you want to monitor.
 
 ```
-wget https://github.com/prometheus/node_exporter/releases/download/v1.8.0/node_exporter-1.8.0.linux-amd64.tar.gz
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
 ```
 Visit the Prometheus downloads page for the latest version. (https://prometheus.io/download/)
 
@@ -239,8 +239,8 @@ sudo chown node_exporter:node_exporter /etc/node_exporter
 
 Untar and move the downloaded Node Exporter binary
 ```
-tar -xvf node_exporter-1.8.0.linux-amd64.tar.gz
-mv node_exporter-1.8.0.linux-amd64 node_exporter-files
+tar -xvf node_exporter-1.8.1.linux-amd64.tar.gz
+mv node_exporter-1.8.1.linux-amd64 node_exporter-files
 ```
 ### Install Node Exporter
 
