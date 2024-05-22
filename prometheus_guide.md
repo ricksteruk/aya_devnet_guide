@@ -454,6 +454,8 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
+`NOTE - You may find that the data source is not connecting.  If this is the case you will need to update the data source to the one that you have just created.
+
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
 Check out [How to integrate Grafana Alerting and Telegram](https://grafana.com/blog/2023/12/28/how-to-integrate-grafana-alerting-and-telegram)
