@@ -39,9 +39,9 @@ After setting up the environment, update your OS, and install the latest Prometh
 
 ```
 sudo apt-get update && apt-get upgrade
-wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v2.52.0/prometheus-2.52.0.darwin-amd64.tar.gz
 tar xfz prometheus-*.tar.gz
-cd prometheus-2.26.0.linux-amd64
+cd prometheus-2.52.0.linux-amd64
 ```
 
 There are two binaries in the directory: `prometheus` the Prometheus main binary file, and `promtool`
