@@ -118,7 +118,7 @@ The configuration file is divided into three parts which are `global`, `rule_fil
 `global` / `scrape_interval` defines how often Prometheus scrapes targets <br>
 `global` / `evaluation_interval` controls how often the software will evaluate rules <br>
 `rule_files` block contains information of the location of any rules we want the Prometheus server to load <br>
-`scrape_configs` contains the information which resources Prometheus monitors.
+`scrape_configs` contains the information on which resources Prometheus monitors.
 
 With the above configuration file, the first exporter is the one that Prometheus exports to monitor itself. As we want to have more precise information about the state of the Prometheus server we reduced the `scrape_interval` to 5 seconds for this job. The parameters `static_configs` and `targets` determine where the exporters are running.  The second exporter is capturing the data from your aya node, and the port by default is `9615`
 
