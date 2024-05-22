@@ -91,6 +91,7 @@ sudo nano /etc/prometheus/prometheus.yml
 Copy and Paste the following configuration into the editor and save with `CTRL + X`
 
 `NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
+`You will also need to ensure that prometheus-external was added to your aya_node_startup.sh script`
 
 ```
 global:
@@ -111,7 +112,6 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9615"]
 ```
-
 
 The configuration file is divided into three parts which are `global`, `rule_files`, and `scrape_configs`.
 
