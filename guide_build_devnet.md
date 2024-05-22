@@ -22,8 +22,8 @@ Login to your server and access the terminal, for example using SSH connection.
 Install dependencies: 
 
 ```bash
-sudo apt upgrade && sudo apt update
-sudo apt install -y git clang curl libssl-dev llvm libudev-dev make protobuf-compiler pkg-config build-essential
+sudo apt update && sudo apt upgrade
+sudo apt install -y curl
 ```
 ### Firewall
 The p2p port `30333` needs to be open so your Validator can communicate, either with only your full node or the entire network.  
@@ -112,6 +112,12 @@ chmod +x utils/session_key_tools/split_session_key.sh
 ### 3.2 Build AyA-Node from Source Code
 
 We recommend not to compile the aya-node on a small virtual machine as this can take quite some time. Instead build the aya-node on your local machine and copy the binary to the server. 
+
+
+Install dependencies:
+```bash
+sudo apt install -y git clang curl libssl-dev llvm libudev-dev make protobuf-compiler pkg-config build-essential
+```
 
 Install Rust: 
 ```bash
