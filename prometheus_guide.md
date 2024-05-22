@@ -172,6 +172,8 @@ level=info ts=2021-04-16T19:02:20.234Z caller=main.go:767 msg="Server is ready t
 
 On a web browser go to `http://YOUR_SERVER_IP_ADDRESS:9090/graph` to check whether you are able to access the Prometheus interface or not. If it is working in your browser, exit the process by pressing on `CTRL + C`.
 
+`NOTE - You will need to have access to port 9090 on your server to test this connection`
+
 Next, we would like to automatically start the server during the boot process, so we have to create a new systemd configuration file:
 
 ```
@@ -207,7 +209,6 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 ```
 
 Prometheus should be running now, and you should be able to access its front again end by re-visiting `http://YOUR_SERVER_IP_ADDRESS:9090/graph`
-
 
 ## Prometheus Node Exporter Setup
 
