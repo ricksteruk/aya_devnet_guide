@@ -326,7 +326,7 @@ Example Output:
 
 The output contains the AURA, GRANDPA and IMONLINE public keys in one large string, we need to split the string up. Each key has 32 bytes, the string is hex encoded, so each key has 64 characters. Each of the keys needs a prefix '0x' to indecate it is hex encoded. The output starts already with '0x' so the first key starts behind the '0x' and is 64 characters long. The second key starts at the 65 character, it has no '0x' prepend yet so we do that. The next key starts at character 130 and also needs a '0x' prefix. All keys should have the same length (32byte or 64 characters) and have a 0x as prefix. 
 
-Tip: Just use the script `./utils/session_key_tools/split_session_key.sh` 
+Tip: Just use the script `./utils/session_key_tools/split_session_key.sh <YOUR_LONG_TEXT_STRING>` 
  
 Example: 
 ```
