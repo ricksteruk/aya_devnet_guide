@@ -90,8 +90,8 @@ sudo nano /etc/prometheus/prometheus.yml
 
 Copy and Paste the following configuration into the editor and save with `CTRL + X`
 
-`NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615`
-`You will also need to ensure that prometheus-external was added to your aya_node_startup.sh script`
+`NOTE: If your aya node is on a different server to prometheus replace localhost:9615 with <your-nodes-ipaddress>:9615` <br>
+`You would also need to ensure that --prometheus-external was added to your start_aya_validator.sh script`
 
 ```
 global:
