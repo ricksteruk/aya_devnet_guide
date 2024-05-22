@@ -22,7 +22,7 @@ Login to your server and access the terminal, for example using SSH connection.
 Install dependencies: 
 
 ```bash
-sudo apt upgrade && sudo apt update
+sudo apt update && sudo apt upgrade
 sudo apt install -y curl
 ```
 
