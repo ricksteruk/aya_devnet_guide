@@ -62,6 +62,8 @@ You can either use precomplied binaries to install aya-node or build the aya-nod
 
 Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide assumes you built from source so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
 
+NOTE: ${USER} is a global variable that returns your username. You do not need to replace this!
+
 ```bash
 cd /home/${USER}
 mkdir -p aya-node/target/release
@@ -190,6 +192,8 @@ First we create a startup script for the AyA-Node.
 Make sure the path to the aya-node binary is correct in the command below. It is expected you cloned and compiled the repository on the validator machine in your users home folder. In this case the aya-node would be located in `/home/myuser/aya-node/target/release`.
 
 Set AyA Home Path to the folder were your aya-node binary is located: 
+
+NOTE: ${USER} is a global variable that returns your username. You do not need to replace this!
 
 ```bash
 export AYA_HOME=/home/${USER}/aya-node
