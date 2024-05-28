@@ -455,7 +455,13 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
-`NOTE - If the data source is not connecting you need to update the data source to your new Prometheus source.`
+`NOTE - If the data source is not connecting and the panels show "no data" you need to update to your new Prometheus source.`
+
+`in this case edit a panel by clicking the 3 dots at the top right and choose Edit`
+![EditPanel](monitoring_assets/edit_panel.png)
+
+`then select your own Prometheus data source from the list`
+![DataSource](monitoring_assets/data_source.png)
 
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
