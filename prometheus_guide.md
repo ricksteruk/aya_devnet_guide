@@ -461,7 +461,7 @@ Here is what it should look like!
 ![EditPanel](monitoring_assets/edit_panel.png)
 
 `then select your own Prometheus data source from the list`
-![DataSource](monitoring_assets/data_source.png)
+![SelectDataSource](monitoring_assets/select_data_source.png)
 
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
