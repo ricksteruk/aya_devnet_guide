@@ -460,7 +460,8 @@ Here is what it should look like!
 `in this case edit a panel by clicking the 3 dots at the top right and choose Edit`
 ![EditPanel](monitoring_assets/edit_panel.png)
 
-`then select your own Prometheus data source from the list`
+`then select your own Prometheus data source from the list in the Query section`
+
 ![SelectDataSource](monitoring_assets/select_data_source.png)
 
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
