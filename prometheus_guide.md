@@ -455,7 +455,7 @@ Here is what it should look like!
 
 ![EnterURL](monitoring_assets/aya_grafana_template.png)
 
-`NOTE - If the data source is not connecting and the panels show "no data" you need to update to your new Prometheus source.`
+`NOTE - If the panels show "no data" you need to update to your new Prometheus data source.`
 
 `in this case edit a panel by clicking the 3 dots at the top right and choose Edit`
 ![EditPanel](monitoring_assets/edit_panel.png)
