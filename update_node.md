@@ -11,7 +11,9 @@ NOTE: `${USER}` is a global variable that returns your username.  You do not nee
 ```bash
 sudo systemctl stop aya-node.service
 cd /home/${USER}/aya-node
+rm -r wm-devnet-chainspec.json
 wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v0.3.0/wm-devnet-chainspec.json
+rm -r target/release/aya-node
 wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v0.3.0/aya-node
 chmod +x target/release/aya-node
 sudo systemctl restart aya-node.service
