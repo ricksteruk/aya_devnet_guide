@@ -1,0 +1,20 @@
+## Updating your existing Aya Node
+
+Most recent version:
+[Release DevNet AyA Node v0.3.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v0.3.0)
+
+We will shut down the aya-node service, copy the new chainspec and aya-node binary files and then restart the aya-node
+
+NOTE: `${USER}` is a global variable that returns your username.  You do not need to replace this!
+
+
+```bash
+sudo systemctl stop aya-node.service
+cd /home/${USER}/aya-node
+wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v0.3.0/wm-devnet-chainspec.json
+wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v0.3.0/aya-node
+chmod +x target/release/aya-node
+sudo systemctl restart aya-node.service
+```
+
+To ckeck what version of aya-node your machine is running:
