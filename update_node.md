@@ -18,3 +18,6 @@ sudo systemctl restart aya-node.service
 ```
 
 To ckeck what version of aya-node your machine is running:
+```bash
+./home/${USER}/aya-node/target/release/aya-node --version
+```
