@@ -3,7 +3,14 @@
 Most recent version:
 [Release DevNet AyA Node v0.3.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v0.3.0)
 
-We will shut down the aya-node service, copy the new chainspec and aya-node binary files and then restart the aya-node
+To check what version of aya-node your machine is running:
+```bash
+cd /home/${USER}/aya-node
+./target/release/aya-node --version
+```
+
+### Running the update
+We will shut down the aya-node service, delete the old files, download the new chainspec and aya-node binary files and then restart the aya-node
 
 NOTE: `${USER}` is a global variable that returns your username.  You do not need to replace this!
 
@@ -19,7 +26,7 @@ chmod +x target/release/aya-node
 sudo systemctl restart aya-node.service
 ```
 
-To ckeck what version of aya-node your machine is running:
+To check what version of aya-node your machine is running:
 ```bash
 cd /home/${USER}/aya-node
 ./target/release/aya-node --version
