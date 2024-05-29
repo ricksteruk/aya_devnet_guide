@@ -26,7 +26,7 @@ chmod +x target/release/aya-node
 sudo systemctl restart aya-node.service
 ```
 
-To check what version of aya-node your machine is running:
+To check your aya-node was sucessfully updated:
 ```bash
 cd /home/${USER}/aya-node
 ./target/release/aya-node --version
