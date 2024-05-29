@@ -55,7 +55,6 @@ sudo ufw status
 
 ## 3. Install Aya-Node
 
-[Release DevNet AyA Node v0.2.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v.0.2.0)
 [Release DevNet AyA Node v0.3.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v0.3.0)
 
 Download and copy the `aya-node` and `wm-devnet-chainspec.json` files to your server. The guide aims to be compatible with building from source code so we will adjust file paths. To get the same folder structure as for the build from source option, create the folder `aya-node/target/release` and copy the `aya-node` binary into it. The `wm-devnet-chainspec.json` would be expected in the folder `aya-node/`
@@ -66,8 +65,8 @@ NOTE: `${USER}` is a global variable that returns your username.  You do not nee
 cd /home/${USER}
 mkdir -p aya-node/target/release
 cd aya-node
-wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/wm-devnet-chainspec.json
-wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.2.0/aya-node
+wget https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.3.0/wm-devnet-chainspec.json
+wget -P target/release https://github.com/worldmobilegroup/aya-node/releases/download/devnet-v.0.3.0/aya-node
 chmod +x target/release/aya-node
 ```
 
