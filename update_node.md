@@ -20,5 +20,5 @@ sudo systemctl restart aya-node.service
 To ckeck what version of aya-node your machine is running:
 ```bash
 cd /home/${USER}/aya-node
-./home/${USER}/aya-node/target/release/aya-node --version
+./target/release/aya-node --version
 ```
