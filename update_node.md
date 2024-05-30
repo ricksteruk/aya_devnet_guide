@@ -1,7 +1,8 @@
 ## Updating your existing Aya Node
 
-Most recent version (checked 30th May 2024)
+Most recent version:
 [Release DevNet AyA Node v0.3.0](https://github.com/worldmobilegroup/aya-node/releases/tag/devnet-v0.3.0)
+<br>(checked 30th May 2024)
 
 To check what version of aya-node your machine is running:
 ```bash
