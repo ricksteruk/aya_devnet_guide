@@ -465,6 +465,18 @@ Here is what it should look like!
 
 ![SelectDataSource](monitoring_assets/select_data_source.png)
 
+
+`if your data source is still not laoding try this process posted by catman on discord :)`
+
+```
+1. Edit each panel
+2. See that the Run queries button is greyed out
+3. Go to the Metrics browser section and just add a random character to the end of the value and remove it again
+eg. substrate_block_height{status="best"} -> substrate_block_height{status="best"}x -> substrate_block_height{status="best"}
+4. The should enable the Run queries button, turning it blue. Click it and you should see it work properly.
+5. Apply on each panel and Save the dashboard at the end
+```
+
 Enjoy your new dashboard!  It is possible to set up alerts from Grafafa by various methods
 
 Check out [How to integrate Grafana Alerting and Telegram](https://grafana.com/blog/2023/12/28/how-to-integrate-grafana-alerting-and-telegram)
