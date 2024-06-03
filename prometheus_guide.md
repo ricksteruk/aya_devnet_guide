@@ -466,7 +466,7 @@ Here is what it should look like!
 ![SelectDataSource](monitoring_assets/select_data_source.png)
 
 
-`if your data source is still not laoding try this process posted by catman on discord :)`
+`if your data source is still not loading try this process posted by catman on discord :)`
 
 ```
 1. Edit each panel
