@@ -461,6 +461,7 @@ Here is what it should look like!
 ![EditPanel](monitoring_assets/edit_panel.png)
 
 `then select your own Prometheus data source from the list in the Query section`
+`you may find that you need to click into the query, type a space and then delete it to reload the query`
 
 ![SelectDataSource](monitoring_assets/select_data_source.png)
 
