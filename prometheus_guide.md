@@ -473,7 +473,7 @@ Here is what it should look like!
 2. See that the Run queries button is greyed out
 3. Go to the Metrics browser section and just add a random character to the end of the value and remove it again
 eg. substrate_block_height{status="best"} -> substrate_block_height{status="best"}x -> substrate_block_height{status="best"}
-4. The should enable the Run queries button, turning it blue. Click it and you should see it work properly.
+4. This should enable the Run queries button, turning it blue. Click it and you should see it work properly.
 5. Apply on each panel and Save the dashboard at the end
 ```
 
