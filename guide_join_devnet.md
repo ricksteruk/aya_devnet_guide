@@ -393,7 +393,7 @@ Add the following Network to Talisman (Polkadot):
 If you want to run more than one Aya node you'll set up multiple accounts in Talisman.  When you create a new account it will not automatcially be connected to the polkadot.js site.  You will need to enable it manually by flipping the toggle.
 
 Go to Settings -> Connected Sites and enable it
-`(PIC GOES HERE)` 
+![Talisman_Connected_Sites](assets/connected_sites.png) 
 
 ### Get FERN
 You need to get some FERN tokens from the faucet to pay for transaction fees. 
