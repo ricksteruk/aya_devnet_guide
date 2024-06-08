@@ -390,9 +390,9 @@ Add the following Network to Talisman (Polkadot):
 ![AyA-DevNet RPC Endpoint Polkadot](assets/talisman_aya_devnet.png)
 
 ### Running multiple Aya nodes
-If you want to run more than one Aya node you'll set up multiple accounts in Talisman.  When you create a new account it will not automatcially be connected to the polkadot.js site.  You will need to enable it manually by flipping the toggle.
+If you want to run more than one Aya node you'll set up multiple accounts in Talisman.  When you create a new account it will not automatcially be connected to the polkadot.js site.  You will need to enable it manually in Talisman.
 
-Go to Settings -> Connected Sites and enable it
+Go to Settings -> Connected Sites in Talisman and flip the toggle to enable your new account(s)
 ![Talisman_Connected_Sites](assets/connected_sites.png) 
 
 ### Get FERN
